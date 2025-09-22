@@ -26,7 +26,6 @@ class Pipe:
     id: str = "cloudflare_responses"
 
     class Valves(BaseModel):
-        # --- [核心最终修正]：修正拼写错误 CLOUDFLADE -> CLOUDFLARE ---
         CLOUDFLARE_ACCOUNT_ID: str = Field(
             default="",
             title="Cloudflare Account ID",
@@ -62,7 +61,7 @@ class Pipe:
     async def pipe(
         self, body: dict, __user__: dict, **kwargs: Any
     ) -> AsyncGenerator[str, None]:
-        # 现在可以正确地读取到值了
+        # 正确地读取到值
         account_id = self.valves.CLOUDFLARE_ACCOUNT_ID
         api_key = self.valves.CLOUDFLARE_API_KEY
 
