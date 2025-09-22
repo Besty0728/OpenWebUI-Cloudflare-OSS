@@ -1,0 +1,7 @@
+{
+  "id": "cloudflare_pipe",
+  "name": "Cloudflare AI Pipe",
+  "author": "Besty",
+  "description": "A high-performance pipe for Cloudflare Workers AI with multi-model support.",
+  "git_url": "https://github.com/Besty0728/OpenWebUI-Cloudflare-OSS/cloudflare_responses.py"
+}
