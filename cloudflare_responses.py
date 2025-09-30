@@ -1,3 +1,14 @@
+"""
+title: Cloudflare的responses端点适配
+id: cloudflare_responses
+author: Besty0728
+author_url: https://github.com/Besty0728
+git_url: https://github.com/Besty0728/OpenWebUI-Cloudflare-OSS/blob/main/cloudflare_responses.py
+description:一个高性能、支持多模型的 OpenWebUI 管道（Manifold），用于与 Cloudflare Workers AI 的 /v1/responses 端点进行交互。使用 aiohttp 实现异步请求以提升性能。
+version: 0.1.0
+license: Apache2.0
+"""
+
 import aiohttp
 import json
 from typing import AsyncGenerator, Dict, Any, List
@@ -138,3 +149,4 @@ class Pipe:
             yield f"错误：无法将 Cloudflare API 的成功响应解析为 JSON。"
         except Exception as e:
             yield f"发生意外错误: {e}"
+
